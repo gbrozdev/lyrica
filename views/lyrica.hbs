@@ -1,13 +1,19 @@
 
+<div style="padding-top: 80px;" class="container">
 
-<h1  >{{lyrica.name}}</h1>
-<h1>{{lyrica.song}}</h1>
-<h1>{{lyrica.lyrics}}</h1>
+
 
 
 <iframe id="existing-iframe-example"
-          width="640" height="360"
+          width="320" height="180"
           src="https://www.youtube.com/embed/{{lyrica.link}}?autoplay=1"
           frameborder="0"
-          style="border: solid 4px #37474F"
-          ></iframe>
+          style=" margin: 30px; border: solid 4px #37474F"
+></iframe>
+
+
+<h1>{{lyrica.song}}</h1>
+<h4>{{lyrica.name}}</h4>
+<h3>{{lyrica.lyrics}}</h3>
+
+</div>

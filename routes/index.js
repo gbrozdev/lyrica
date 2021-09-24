@@ -5,7 +5,6 @@ var ObjectId = require('mongodb').ObjectId
 /* GET home page. */
 router.get('/', async function(req, res) {
     var lyrics = await db.get().collection('lyrics').find().toArray()
-    console.log(lyrics);
     res.render('index');
 });
 
@@ -15,15 +14,13 @@ router.get('/add-lyrics', function(req, res) {
 
 router.get('/lyrics',async function(req, res) {
     var lyrics = await db.get().collection('lyrics').find().toArray()
-    console.log(lyrics);
     res.render('lyrics' , {lyrics});
 });
 
+
 router.get('/lyrica/:id',async function(req, res) {
     var id = req.params.id
-    console.log(id);
     var lyrica = await db.get().collection('lyrics').findOne({_id:ObjectId(id)})
-    console.log(lyrica);
     res.render('lyrica',{lyrica});
 });
 

@@ -1,10 +1,28 @@
-<div class="row container d-flex">
-<i class="fa-solid fa-music-note"></i>
-<a  href="/add-lyrics" ><i style="margin: 10px;" class="fa-solid fa-plus"></i></a>
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+{{!-- <i class="fa-solid fa-music-note"></i>
+<a  href="/add-lyrics" ><i style="margin: 10px;" class="fa-solid fa-plus"></i></a> --}}
+
+
+<style>
+    .lyrica {
+        padding: 25px;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+    .lyrica input {
+        margin-left: 25px;
+        width: 100vh;
+    }
+</style>
+
+
+<div class="row container d-flex lyrica">
+    <h1 style="margin-bottom: 60px;">Lyrica</h1>
+    <a  href="/add-lyrics" style="margin: 10px;"><h3 style="margin-bottom: 50px;">+</h3></a>
+    <input class="form-control"  type="search" placeholder="Search" aria-label="Search">
 </div>
-
-
 
 
 {{#each lyrics}}
@@ -16,7 +34,6 @@
                 <h5 class="card-title">{{this.song}}</h5>
                 <h6 class="card-subtitle mb-2 text-muted"> {{this.name}} </h6>
                 <p class="card-text">{{this.description}}</p>
-                <a href="{{this.link}}" class="card-link">watch</a>
                 <a href="/lyrica/{{this._id}}" class="card-link">here with lyrics</a>
             </div>
         </div>

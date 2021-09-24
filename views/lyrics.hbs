@@ -1,16 +1,20 @@
+<div>
+
 {{#each lyrics}}
 
-<div class="container">
+<div class="container m-3 ">
     <div class="row">
         <div class="card" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title">{{this.song}}</h5>
                 <h6 class="card-subtitle mb-2 text-muted"> {{this.name}} </h6>
-                <a href="{{this.link}}" class="card-link">watch</a>
                 <a href="/lyrica/{{this._id}}" class="card-link">here with lyrics</a>
+                <img width="160px" height="90px" src="http://img.youtube.com/vi/{{this.link}}/default.jpg" title="YouTube Video" alt="YouTube Video" />
             </div>
         </div>
     </div>
 </div>
 
 {{/each}}
+
+</div>
