@@ -1,12 +1,3 @@
-<div class="row container d-flex">
-<i class="fa-solid fa-music-note"></i>
-<a  href="/add-lyrics" ><i style="margin: 10px;" class="fa-solid fa-plus"></i></a>
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-</div>
-
-
-
-
 {{#each lyrics}}
 
 <div class="container">
@@ -15,7 +6,6 @@
             <div class="card-body">
                 <h5 class="card-title">{{this.song}}</h5>
                 <h6 class="card-subtitle mb-2 text-muted"> {{this.name}} </h6>
-                <p class="card-text">{{this.description}}</p>
                 <a href="{{this.link}}" class="card-link">watch</a>
                 <a href="/lyrica/{{this._id}}" class="card-link">here with lyrics</a>
             </div>
