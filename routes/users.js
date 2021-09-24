@@ -6,7 +6,7 @@ router.get('/', function(req, res) {
   res.render('admin');
 });
 
-router.get('/deletAll', function(req, res) {
+router.get('/deleteAll', function(req, res) {
   db.get().collection('lyrics').remove()
   res.redirect('/');
 });
